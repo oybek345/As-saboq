@@ -1,169 +1,390 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-#salom {
-    background: url(Rectangle\ 51.png) no-repeat center/contain;
+body {
     width: 100%;
     height: auto;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    font-family: 'Sofia Sans', sans-serif;
+}
+.div{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.nav {
+    width: 100%;
+    /* height: 70px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #161004;
+    min-height: 8vh;
+    align-items: center;
 }
 
-b{
-    font-weight: bolder;
-    font-family: "roboto", sans-serif;
-    color: white;
+.logo {
+
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 3px;
+
+}
+
+.nav-links {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+
+}
+
+ul li {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 5px;
 }
 
 
-.navbar {
-    background-color: black;
+.nav-active {
+    transform: translate(0);
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translateX(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.nav-links {
+    width: 50%;
+}
+
+.toggle .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line-2 {
+    opacity: 0;
+}
+
+.toggle .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navbtn {
+    padding: 5px 10px;
+    background-color: #FF9E67;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+.kattadiv {
+    width: 100%;
+    height: 100vh;
+    background: url("img/1.png") center center/cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        height: 100vh;
+        align-items: center;
+        background-color: #1d2c3d;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.6s ease-in
+    }
+
+    .divcha3 {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+
+    }
+
+    .kattadiv {
+        display: block;
+        flex-direction: column;
+    }
+
+    body {
+        overflow-x: scroll;
+    }
+    .kettadiv div{
+        margin: 0 auto;
+    }
+
+}
+
+.kattaimgdiv {
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.kattaimgdiv img {
+    margin: 0 auto;
+}
+
+.malum h1 {
+    text-align: center;
+    color: #C98A3B;
+}
+
+.malum {
+    width: 100%;
+    height: 781px;
+    /* background-color: red; */
+    background: url("img/4.png") center center/cover;
+    background-repeat: no-repeat;
+}
+
+.cdiv {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+.slide {
+    margin-top: 100px;
+}
+
+.div1 {
+    width: 508px;
+    height: 701px;
+    background: url("img/Rectangle\ 56.png") center center/cover;
+    border-bottom-color: #C98A3B 2px solid;
+}
+
+.div3 {
+    width: 508px;
+    height: 701px;
+    background: url("img/Rectangle\ 60\ \(1\).png") center center/cover;
+    border-bottom-color: #C98A3B 2px solid;
+}
+
+.div2h3 {
+    width: 800px;
+    color: #C98A3B;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.div2 {
+    width: 900px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.narxlar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.b{
-}
-.a{
-}
-.a a {
-    font-family: "roboto", sans-serif;
-    color: white;
-    text-decoration: none;
-    padding: 0 10px;
-}
-.a a:hover{
-    color: #FF9E67;
-    transition: 0.5s;
-}
-.a i{
-    display: none;
-}
 
-.a button {
-    width: 160px;
-    height: 40px;
-    color: white;
-    background-color: #FF9E67;
-    font-size: 18px;
-    border: 0;
-    border-radius: 8px;
-}
-
-h1 span{
-    color: #C98A3B;
-}
-h1{
-    font-size: 40px;
-    font-family: "Roboto", sans-serif;
-
-}
-.df{
+.divcha {
+    width: 900px;
+    height: 200px;
     display: flex;
-}
-.ung img{
-
-}
-#div{
-    display: none;
-}
-@media only screen and (max-width: 600px) {
-    .df {
-    display: block;
-    }
-    .ung img{
-        width:270px;
-        margin-left: 100px;
-        margin-top: 90px;
-    }
-    #salom{
-        width: 100%;
-        height: 30vh;
-    }
-    h1{
-        font-size: 25px;
-        padding-top: 140px;
-        padding-left:110px;
-    }
-    .navbar .a{
-        display: none;
-    }
-#div{
-    display: block;
-      color: white;
-      margin-top: -90px;
-}
-.navbar  i{
-    font-size: 25px;
-    margin-top: 40px;
-}
-.navbar{
-    display: flex;
-}
-#div button{
-    background: none;
-    border: none;
-}
-.c a{
-color: black;
-display: block;
-text-decoration: none;
-font-size: 20px;
-margin-top: 20px;
-}
-.c button{
-    font-size: 20px;
-    margin-top: 20px    ;
-}
-  }
-  #div .btn-close{
-    color: black;
-}
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.container{
-    width: 100%;
-    height: 60vh;
-}
-.better {
-    width: 100%;
-    height: 700px;
-    margin-top: 100px;
-    background-image: url("./img/Reactangle17.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 1;
-}
-.price{
-    width: 60%;
-    padding: 25px;
+    box-shadow: 2px 2px 10px 2px;
+    justify-content: space-around;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); 
-    margin: auto;
-    height: 180px;
-    justify-content: center;
     align-items: center;
-    z-index: 2;
 }
-.price h3{
-    width: 100%;
-  font-size: 30px;
-margin-top: 5px;
-z-index: 10;
+
+.divcha2 {
+    width: 250px;
 }
-.open {
-    width: 100%;
-    height: 20px;
+
+.divcha2 img {
+    /* width: 300px; */
+    transform: translate(0px, 27px);
+}
+
+.divcha3 {
+    width: 900px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px 2px;
+    margin-top: 30px;
+}
+
+.rov {
+    margin: 0 auto;
+}
+
+.son1 {
+    width: 70px;
+    height: 70px;
+    background: url(img/Rectangle\ 73.png) center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
 }
 
-.open h6 {
-    color: gray;
+.sdiv {
+    width: 85%;
+    /* height: 700px; */
+    display: grid;
+    margin-bottom: 10px;
+    grid-template-columns: 50rem 1rem;
+    margin: 0 auto;
+}
+
+.sonlar {
+    width: 600px;
+    height: auto;
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.h6cha {
+    width: 500px;
+}
+
+@media (min-width:0) and (max-width: 768px) {
+    .sdiv {
+        display: block;
+    }
+}
+
+.toplamdiv {
+    width: 95%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.topdivchla {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+.topimg:hover {
+    transform: scale(3rem,3rem);
+}
+@media (min-width:0) and (max-width: 768px) {
+    .toplamdiv {
+        display: block;
+    }
+}
+.savol{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.savol .savoldiv{
+    width: 900px;
+    height: 70px;
+    display: flex;
+ 
+}
+.savoldiv{
+    margin-left: 100px;
+    margin: 100px;
+}
+.savoldiv div{
+    width: 800px;
+    height: auto;
+    border-radius: 5px;
+    border: #161004 2px solid;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.savoldiv:last-child(2){
+    margin-right: 200px;
+    position: relative;
+}
+#bor{
+    /* border-radius: px; */
+    padding: 20px 60px;
+    border: #161004 2px solid;
+}
+#rowcha{
+    width: 95%;
+    height: 100vh;
+    background: url(img/Rectangle\ 78.png) center center/cover;
+    margin: 0 auto;
+}
+.by{
+    width: 90%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+.bycha{
+    width: 350px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
